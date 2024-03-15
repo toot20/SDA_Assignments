@@ -16,8 +16,8 @@ public class TaskThreeTest extends Tests{
     // Task 3
     @Test
     public void ScrollDawnTest() throws AWTException, InterruptedException{
-        //Go to Amazon
-        bot.navigate("https://www.amazon.com/");
+        //Go to ebay
+        bot.navigate("https://www.ebay.com/");
 
         //Scroll to the bottom of the page using a robot
         Robot robot = new Robot();
@@ -25,18 +25,18 @@ public class TaskThreeTest extends Tests{
         Thread.sleep(1000);
 
         // Click on the "Back to top" web element
-        WebElement backToTop = driver.findElement(By.id("navBackToTop"));
+        WebElement backToTop = driver.findElement(By.id("gh-bt"));
         backToTop.click();
         Thread.sleep(1000);
 
-        //Click on the Amazon logo at the bottom of the page (in the footer) using JavascriptExecutor
-        WebElement amazonLogo = driver.findElement(By.xpath("//div[contains(@class, 'navFooterLogoLine')]"));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", (amazonLogo));
-        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", (amazonLogo));
+        //Click on the ebay logo at the top of the page using JavascriptExecutor
+        WebElement ebayLogo = driver.findElement(By.id("gh-la"));
+        //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", (amazonLogo));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", (ebayLogo));
         Thread.sleep(1000);
 
         //Use Actions to type "ClarusWay" in the search box and perform the search
-        WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+        WebElement searchBox = driver.findElement(By.id("gh-ac"));
         Actions actions = new Actions(driver);
         actions.sendKeys(searchBox, "ClarusWay").sendKeys(Keys.ENTER).build().perform();
 
