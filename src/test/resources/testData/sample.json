@@ -1,0 +1,15 @@
+{
+  "searchQuery": "Selenium WebDriver",
+  "SoftAssertionsTestData": {
+    "Username": "student",
+    "Password": "Password123"
+  },
+  "lambda": {
+    "firstname": "Fname",
+    "lastname": "Lname",
+    "email_postfix": "test@email.com",
+    "phone": "0447689031",
+    "password": "$cur3p@$$w0rd",
+    "ExpectedRegistrationSuccessMessage": "Your Account Has Been Created!"
+  }
+}
